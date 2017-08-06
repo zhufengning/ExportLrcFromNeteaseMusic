@@ -1,0 +1,2 @@
+# ExportLrcFromNeteaseMusic
+从Android端网易云音乐导出歌词

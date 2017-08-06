@@ -1,0 +1,13 @@
+appname="云音乐歌词导出"
+appver="1.0.0"
+appcode="1"
+appsdk="15"
+path_pattern=""
+packagename="com.zfn.exportlrc"
+theme="Theme_DeviceDefault_Light_NoActionBar"
+developer=""
+description=""
+debugmode=true
+user_permission={
+  "WRITE_EXTERNAL_STORAGE"
+}

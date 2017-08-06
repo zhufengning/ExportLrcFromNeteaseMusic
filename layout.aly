@@ -1,0 +1,26 @@
+{
+  LinearLayout;
+  layout_height="fill";
+  layout_width="fill";
+  orientation="vertical";
+  {
+    EditText;
+    id="t_path";
+    layout_width="fill";
+    text="/sdcard/netease/cloudmusic/Music/";
+  };
+  {
+    Button;
+    id="b_start";
+    layout_height="wrap_content";
+    gravity="center";
+    layout_width="wrap_content";
+    text="按一下就好了";
+  };
+  {
+    TextView;
+    layout_width="fill";
+    layout_height="fill";
+    id="t_p"
+  };
+};

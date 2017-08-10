@@ -51,10 +51,13 @@ function onStartClick()
       fullname=string.gsub(fullname,"\\"," ")
       fullname=path..fullname
       printf(fullname)
-      f=io.open(fullname,"w")
-      io.output(f)
-      io.write(lrc)
-      io.close(f)
+      if file_exists(fullname) then
+      else
+        local f=io.open(fullname,"w")
+        io.output(f)
+        io.write(lrc)
+        io.close(f)
+      end
     end
   end
   print('finished')
@@ -85,4 +88,9 @@ end
 
 function printf(str)
   t_p.text=t_p.text..str.."\n"
+end
+
+function file_exists(path)
+  local f=io.open(path,'r')
+  if f~=nil then io.close(f) return true else return false end
 end

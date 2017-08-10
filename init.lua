@@ -1,5 +1,5 @@
 appname="云音乐歌词导出"
-appver="1.0.0"
+appver="1.1"
 appcode="1"
 appsdk="15"
 path_pattern=""
@@ -9,5 +9,6 @@ developer=""
 description=""
 debugmode=true
 user_permission={
+  "INTERNET",
   "WRITE_EXTERNAL_STORAGE"
 }

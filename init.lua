@@ -1,6 +1,6 @@
 appname="云音乐歌词导出"
-appver="1.1"
-appcode="1"
+appver="1.2"
+appcode="3"
 appsdk="15"
 path_pattern=""
 packagename="com.zfn.exportlrc"

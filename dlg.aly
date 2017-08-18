@@ -1,0 +1,14 @@
+{
+  LinearLayout,
+  orientation="vertical",
+  layout_width="fill",
+  layout_height="fill",
+  {
+    Button,
+    id="dlg_b",
+    text="不调整   \n奇怪的格式",
+    textSize="15sp",
+    textColor="#FFE91E63",
+    gravity="right",
+  },
+}

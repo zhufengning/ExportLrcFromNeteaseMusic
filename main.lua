@@ -27,18 +27,17 @@ b_start.onClick=function ()
   dlg=LuaDialog(activity)
   dlg.setTitle("注意")
   dlg.setMessage("即将开始导出歌词。开始后将会卡住，请不要关闭。如需后台运行，请锁定进程（如果可以）。\n目前调整奇怪的歌词格式仍处于开发阶段，如果识别到奇怪的歌词，会导致所有的英文句号变成冒号。遇到bug请在酷安@小米市场调查")
-  dlg.setButton("继续",function()
-    
+  dlg.setNegativeButton("继续",function()
+
     onStartClick()
   end
   )
 
-dlg.setView(loadlayout("dlg"))
-dlg_b.onClick=function ()
-  gs=false
-  dlg.dismiss()
-  onStartClick()
-  end
+  dlg.setPositiveButton("不修改格式",function ()
+    gs=false
+    dlg.dismiss()
+    onStartClick()
+  end)
   dlg.show()
 
 end
@@ -60,9 +59,11 @@ function onStartClick()
       printf("读取到歌词:\n"..lrc)
       if gs then
         if string.find(lrc,"[*.*0]") ~= nil then
+          print("格式1")
           lrc=string.gsub(lrc,"%.",":")
-          lrc=string.gsub(lrc,"0]","]")
+          lrc=string.gsub(lrc,".]","]")
         elseif string.find(lrc,"[*.*]")~= nil then
+          print("格式2")
           lrc=string.gsub(lrc,"%.",":")
         end
       end

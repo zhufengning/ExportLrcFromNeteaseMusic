@@ -1,5 +1,5 @@
-appname="云音乐歌词导出"
-appver="1.2.1"
+﻿appname="云音乐歌词导出"
+appver="1.3"
 appcode="3"
 appsdk="15"
 path_pattern=""
